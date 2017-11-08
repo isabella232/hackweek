@@ -4,6 +4,7 @@ var auctionRes;
 
 module.exports = {
 httpGet : function (theUrl){
+    console.log("url for setting up:"+theUrl)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl,false);
     xmlHttp.send(null);
@@ -20,9 +21,6 @@ getAuctionRes : function (baseURL, gameID){
     //var correlationId = correlationId;
     console.log("correlationId: "+correlationId())
     var trackingURLs = getTrackingURLs(); 
-
-
-    
 
 },
 getTrackingURLs
@@ -64,7 +62,7 @@ var getTrackingURLs = function (){
 
 var correlationId = function(){
     return auctionRes.correlationId;
-    
+    // 
 }
 
 var placements = function(){
