@@ -1,0 +1,23 @@
+{
+  "name": "hackweek",
+  "version": "0.0.1",
+  "description": "brand ads project to tie together several steps in the ads verification process.",
+  "main": "auctionResVeri.js",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jindoujiao/hackweek.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jindoujiao/hackweek/issues"
+  },
+  "homepage": "https://github.com/jindoujiao/hackweek#readme"
+}
