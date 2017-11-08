@@ -11,7 +11,7 @@ httpGet : function (theUrl){
     return JSON.parse(xmlHttp.responseText);
 },
 getAuctionRes : function (baseURL, gameID){
-    var url = baseURL+'/v4/games/'+gameID+'/requests';
+    var url = baseURL+'/v4/games/'+gameID+'/requests?platform=ios';
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET",url,false);
     xmlHttp.send(null);
@@ -21,6 +21,7 @@ getAuctionRes : function (baseURL, gameID){
     //var correlationId = correlationId;
     console.log("correlationId: "+correlationId())
     var trackingURLs = getTrackingURLs(); 
+    return auctionRes;
 
 },
 getTrackingURLs
