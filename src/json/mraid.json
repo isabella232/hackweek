@@ -1,0 +1,29 @@
+{
+    "correlationId": "b88cfcd32524a8f3a43136",
+    "placements": {
+    "defaultVideoAndPictureZone": "000000000000000000000001"
+    },
+    "media": {
+    "000000000000000000000001": {
+    "contentType": "programmatic/mraid-url",
+    "adType": "MRAID",
+    "content": "{\"dynamicMarkup\":\"var markup = 'dynamic';\",\"markup\":\"\",\"inlinedUrl\":\"https://img.serveroute.com/bf_fairway_orig/unity_nonrtb/index_inlined.html\"}",
+    "trackingUrls": {
+    "impression": [
+    "https://fake-ads-backend.applifier.info/brands/10038/%ZONE%/impression/common?adSourceId=&advertiserDomain=gramgames.com&advertisingTrackingId=49f7acaa-81f2-4887-9f3b-cd124854879c&cc=&creativeId=2090068&dealCode=&demandSeatId=&fee=0&fillSource=xinstall&floor=.1&gamerId=4654wa21b54e3b0100f44c92&gross=&grossTag=0&mediaType=mraid&networkId=&precomputedFloor=1&seatId=&utxid=UX-e5788f5e-1371-4f83-4f41-710daa628dca&value=1260&sdkVersion=%SDK_VERSION%",
+    "https://fake-ads-backend.applifier.info/ack/10038?org_path=impression"
+    ],
+    "complete": [
+    "http://test.complete.com/complete1"
+    ],
+    "click": [
+    "http://test.complete.com/click1"
+    ]
+    },
+    "campaignId": "000000000000000000000001",
+    "cacheTTL": 123,
+    "creativeId": "not-defined-in-fab",
+    "seatId": 456
+    }
+    }
+}
