@@ -1,11 +1,10 @@
-//exports.contentParser = function (contentResponse, done){
-function contentParser (done){
+exports.contentParser = function (contentResponse, done){
   var fs=require('fs');
-  var data=fs.readFileSync('json/mraid.json');
+  //var data=fs.readFileSync('json/mraid.json');
   var contentUrls = new Array;
 
   json_data = JSON.parse(data);
-  content = json_data['media']['000000000000000000000001']['content'];
+  content = contentResponse['media']['000000000000000000000001']['content'];
   var contentData = content.split(',');
   //console.log(contentData);
   for(i = 0; i < contentData.length; i++) {
