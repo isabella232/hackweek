@@ -8,7 +8,12 @@ httpGet : function (theUrl){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl,false);
     xmlHttp.send(null);
-    return JSON.parse(xmlHttp.responseText);
+
+    if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
+        return JSON.parse(xmlHttp.responseText)
+    }else{
+        return 
+    }
 },
 getAuctionRes : function (baseURL, gameID){
     var url = baseURL+'/v4/games/'+gameID+'/requests?platform=ios';
@@ -21,58 +26,66 @@ getAuctionRes : function (baseURL, gameID){
     //var correlationId = correlationId;
     console.log("correlationId: "+correlationId())
     var trackingURLs = getTrackingURLs(); 
-    return auctionRes;
+    return trackingURLs;
 
+},
+
+verifyURL : function (theUrl,callback){
+   //console.log("url for setting up:"+theUrl)
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", theUrl,false);
+    xmlHttp.send(null);
+
+    if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
+        return callback(true)
+    }else{
+        callback(theUrl+";ERROR CODE:"+xmlHttp.status)
+    }
 },
 getTrackingURLs
 
 };
 
 var getTrackingURLs = function (){
-    //console.log(auctionRes);
-    var urls = [];  
-    
+    var urlList = new Array();
     var placementsList = placements();
-    var content; //content: dynamicMarkup, inlinedUrl, etc.
     
     for(var x in placementsList){
-        var placement = placementsList[x];
-        console.log("placemtn##:" + placement)
-        var trackingURLs;
-        recursiveGetProperty(auctionRes.media, placement, function(obj){
-            console.log("obj"+obj)
-            content = JSON.stringify(obj)
-            content = JSON.parse(content)
-            //contentType = content.contentType;
-            trackingURLs = content.trackingUrls;
-            console.log("trackingURLS::" + trackingURLs)
-        });
-
-        var impressionURLs = JSON.stringify(trackingURLs)
-        impressionURLs = JSON.parse(impressionURLs).impression
+        var placementId = placementsList[x];
+        console.log("placemtn##:" + placementId)
         
-        for (var i = 0; i < impressionURLs.length; i++){
+        recursiveGetProperty(auctionRes.media, placementId, function(obj){
+            placementBody = JSON.stringify(obj)
+            contentType = JSON.parse(placementBody).contentType
+            content = JSON.parse(placementBody).content
 
-            urls['impression'+i]=impressionURLs[i];
-        }
+            var contentParsered = {}
+           // contentParsered = contentParser(contentType, content) //Calling Content parser, return a array
+            // for(x in contentParsered){
+            //     urlList.push(contentParsered[x])
+            // }
+            var trackingUrls = JSON.parse(placementBody).trackingUrls
+           
+            for(key in trackingUrls){
+                var urls = trackingUrls[key]
+                for(var i=0; i<urls.length; i++){
+                    urlList.push(urls[i])
+                }
+
+            }
+        });
     }
    
-    return urls;    
+    return urlList;    
 
 }
 
 var correlationId = function(){
-    return auctionRes.correlationId;
-    // 
+    return auctionRes.correlationId; 
 }
 
-var placements = function(){
-   
+var placements = function(){   
     return auctionRes.placements;
-    // var placements = auctionRes.placements
-    // for (var x in placements){
-    //     console.log(placements[x])
-    // }
 }
     
 
