@@ -15,7 +15,7 @@ var urlList = httpClient.getAuctionRes(url);
 
 var urlBroken = new Array()
 for(var i=0; i<urlList.length; i++){
-  //  console.log(urlList[i])
+  console.log(urlList[i]);
     httpClient.verifyURL(urlList[i], function(obj){
         if(obj!=true){
             urlBroken.push(obj)
