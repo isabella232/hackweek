@@ -5,25 +5,29 @@ var adsType = 'mraid_brands'
 var setupURL = baseURL+'setup/'+adsType
 //var gameID_mraid = httpClient.httpGet(setupURL).game_id
 
-var gameID_mraid=10003
+var gameID_mraid=10006
 console.log("mraid:::"+gameID_mraid);
 
 //var auctionRes = httpClient.getAuctionRes(baseURL,gameID_mraid);
 //console.log("correlationID:"+auctionRes.correlationId);
-var urlList = httpClient.getAuctionRes(baseURL,gameID_mraid);
-var URLs = new Array()
+var url = baseURL+'/v4/games/'+gameID_mraid+'/requests?platform=ios';
+var urlList = httpClient.getAuctionRes(url);
+
+var urlBroken = new Array()
 for(var i=0; i<urlList.length; i++){
   //  console.log(urlList[i])
     httpClient.verifyURL(urlList[i], function(obj){
         if(obj!=true){
-            URLs.push(obj)
+            urlBroken.push(obj)
         }
     });
 }
-if(URLs.length!=0){
+
+if(urlBroken.length!=0){
     console.log("Broken URLs::")
-    for(var i=0; i<URLs.length; i++){
-        console.log(URLs[i])
+    for(var i=0; i<urlBroken.length; i++){
+        console.log(urlBroken[i])
     }
 }
 
+console.log("URLs verified:"+urlList.length+"; URLs Brokedn:"+urlBroken.length);

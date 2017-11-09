@@ -15,32 +15,32 @@ httpGet : function (theUrl){
         return 
     }
 },
-getAuctionRes : function (baseURL, gameID){
+getAuctionRes : function(baseURL, gameID){
     var url = baseURL+'/v4/games/'+gameID+'/requests?platform=ios';
+    return getAuctionRes(url)
+},
+getAuctionRes : function (url){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET",url,false);
     xmlHttp.send(null);
-
     auctionRes = JSON.parse(xmlHttp.responseText);
-    //return xmlHttp.responseText;
-    //var correlationId = correlationId;
     console.log("correlationId: "+correlationId())
     var trackingURLs = getTrackingURLs(); 
     return trackingURLs;
-
 },
 
 verifyURL : function (theUrl,callback){
-   //console.log("url for setting up:"+theUrl)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl,false);
     xmlHttp.send(null);
 
     if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
         return callback(true)
-    }else{
+    }
+    else{
         callback(theUrl+";ERROR CODE:"+xmlHttp.status)
     }
+    //todo: handle 300 return code
 },
 getTrackingURLs
 
