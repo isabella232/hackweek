@@ -1,5 +1,6 @@
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var contentParser = require("./contentParse");
 var auctionRes;
 
 module.exports = {
@@ -12,7 +13,7 @@ httpGet : function (theUrl){
     if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
         return JSON.parse(xmlHttp.responseText)
     }else{
-        return 
+        return;
     }
 },
 getAuctionRes : function(baseURL, gameID){
@@ -25,7 +26,7 @@ getAuctionRes : function (url){
     xmlHttp.send(null);
     auctionRes = JSON.parse(xmlHttp.responseText);
     console.log("correlationId: "+correlationId())
-    var trackingURLs = getTrackingURLs(); 
+    var trackingURLs = getTrackingURLs();
     return trackingURLs;
 },
 
@@ -49,25 +50,26 @@ getTrackingURLs
 var getTrackingURLs = function (){
     var urlList = new Array();
     var placementsList = placements();
-    
+
     for(var x in placementsList){
         var placementId = placementsList[x];
         console.log("placemtn##:" + placementId)
-        
+
         recursiveGetProperty(auctionRes.media, placementId, function(obj){
             placementBody = JSON.stringify(obj)
             contentType = JSON.parse(placementBody).contentType
             content = JSON.parse(placementBody).content
 
-            var contentParsered = {}
-           // contentParsered = contentParser(contentType, content) //Calling Content parser, return a array
-            // for(x in contentParsered){
-            //     urlList.push(contentParsered[x])
-            // }
-            var trackingUrls = JSON.parse(placementBody).trackingUrls
-           
+            var contentParsed = {};
+            contentParsed = contentParser(contentType, content);
+            //Calling Content parser, return a array
+             for(x in contentParsed){
+                 urlList.push(contentParsed[x]);
+             }
+            var trackingUrls = JSON.parse(placementBody).trackingUrls;
+
             for(key in trackingUrls){
-                var urls = trackingUrls[key]
+                var urls = trackingUrls[key];
                 for(var i=0; i<urls.length; i++){
                     urlList.push(urls[i])
                 }
@@ -75,19 +77,19 @@ var getTrackingURLs = function (){
             }
         });
     }
-   
-    return urlList;    
+
+    return urlList;
 
 }
 
 var correlationId = function(){
-    return auctionRes.correlationId; 
+    return auctionRes.correlationId;
 }
 
-var placements = function(){   
+var placements = function(){
     return auctionRes.placements;
 }
-    
+
 
 var medias = function(){
    return auctionRes.media;

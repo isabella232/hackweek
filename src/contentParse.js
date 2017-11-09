@@ -1,20 +1,15 @@
-exports.contentParser = function (contentResponse, done){
-  var fs=require('fs');
-  //var data=fs.readFileSync('json/mraid.json');
+function parse(contentType, data){
+  var fs = require('fs');
   var contentUrls = new Array;
 
   json_data = JSON.parse(data);
-  content = contentResponse['media']['000000000000000000000001']['content'];
-  var contentData = content.split(',');
-  //console.log(contentData);
-  for(i = 0; i < contentData.length; i++) {
-    if (/http/.test(contentData[i])){
-      str = contentData[i].split('\": \"')[1];
-      var matches = str.match(/https?\:\/\/\S+[^\'\"\}\{]/);
+  Object.keys(json_data).forEach(function(k) {
+    if (/http/.test(json_data[k])){
+      var matches = json_data[k].match(/https?\:\/\/\S+[^\'\"\}\{]/);
       contentUrls.push(matches[0]);
     }
-  }
+  });
   return contentUrls;
 };
 
-contentParser();
+module.exports = parse;
