@@ -14,6 +14,12 @@ there needs to be a better automated solution.</p>
 <p>Automation can flow can be broken down into 3 sections for any creative:</p>
 <ul><li>URL verification</li><li>Creative Playing/Render</li><li>Events emitted from device</li></ul>
 <hr/>
+<h2>How to use</h2>
+<h4>Pre Requirements</h4>
+<pre>npm install</pre>
+<h4>To run scripts</h4>
+<pre>node main.js</pre>
+<hr/>
 <h2>Future planned work</h2>
 <p>Goal of this work is to incorporate this work into our flow for testing. 
 There will be more work to improve the other steps.</p><p>Possible considerations include:</p>
