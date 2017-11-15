@@ -1,0 +1,40 @@
+{
+    "correlationId": "414b7937622c3f080bb92d",
+    "placements": {
+    "defaultVideoAndPictureZone": "000000000000000000000001",
+    "video": "000000000000000000000002",
+    "rewardedVideo": "000000000000000000000003"
+    },
+    "media": {
+    "000000000000000000000001": {
+    "contentType": "comet/campaign",
+    "adType": "MRAID",
+    "content": "{ \"appStoreId\": \"667728512\", \"bypassAppSheet\": false, \"gameIcon\": \"http://cdn.unityads.unity3d.com/impact/11017/test_game_icon.png\", \"gameId\": 10012, \"gameName\": \"FABulous game\", \"store\": \"apple\", \"id\": \"583dfda0d933a3630a53249c\", \"rating\": 3.500000, \"ratingCount\": 354, \"mraidUrl\": \"https://unityads-cdn-origin.s3.amazonaws.com/playables/production/ios/HAWK-18082017/index.html\", \"clickUrl\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=click\", \"videoEventUrls\": { \"video_start\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=video_start\", \"first_quartile\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=first_quartile\", \"midpoint\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=midpoint\", \"third_quartile\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=third_quartile\", \"video_end\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=video_end\" } } ",
+    "campaignId": "000000000000000000000001",
+    "cacheTTL": 123,
+    "trackingUrls": {},
+    "creativeId": "not-defined-in-fab",
+    "seatId": 456
+    },
+    "000000000000000000000002": {
+    "contentType": "comet/campaign",
+    "adType": "MRAID",
+    "content": "{ \"appStoreId\": \"667728512\", \"bypassAppSheet\": false, \"gameIcon\": \"http://cdn.unityads.unity3d.com/impact/11017/test_game_icon.png\", \"gameId\": 10012, \"gameName\": \"FABulous game\", \"store\": \"apple\", \"id\": \"583dfda0d933a3630a53249c\", \"rating\": 3.500000, \"ratingCount\": 354, \"mraidUrl\": \"https://unityads-cdn-origin.s3.amazonaws.com/playables/production/ios/HAWK-18082017/index.html\", \"clickUrl\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=click\", \"videoEventUrls\": { \"video_start\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=video_start\", \"first_quartile\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=first_quartile\", \"midpoint\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=midpoint\", \"third_quartile\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=third_quartile\", \"video_end\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=video_end\" } } ",
+    "campaignId": "000000000000000000000001",
+    "cacheTTL": 123,
+    "trackingUrls": {},
+    "creativeId": "not-defined-in-fab",
+    "seatId": 456
+    },
+    "000000000000000000000003": {
+    "contentType": "comet/campaign",
+    "adType": "MRAID",
+    "content": "{ \"appStoreId\": \"667728512\", \"bypassAppSheet\": false, \"gameIcon\": \"http://cdn.unityads.unity3d.com/impact/11017/test_game_icon.png\", \"gameId\": 10012, \"gameName\": \"FABulous game\", \"store\": \"apple\", \"id\": \"583dfda0d933a3630a53249c\", \"rating\": 3.500000, \"ratingCount\": 354, \"mraidUrl\": \"https://unityads-cdn-origin.s3.amazonaws.com/playables/production/ios/HAWK-18082017/index.html\", \"clickUrl\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=click\", \"videoEventUrls\": { \"video_start\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=video_start\", \"first_quartile\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=first_quartile\", \"midpoint\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=midpoint\", \"third_quartile\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=third_quartile\", \"video_end\": \"http://localhost:4567/ack/10012?campaignId=583dfda0d933a3630a53249c&event=video_end\" } } ",
+    "campaignId": "000000000000000000000001",
+    "cacheTTL": 123,
+    "trackingUrls": {},
+    "creativeId": "not-defined-in-fab",
+    "seatId": 456
+    }
+    }
+    }

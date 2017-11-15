@@ -1,16 +1,13 @@
 var httpClient = require('./auctionResVeri.js')
-var baseURL = 'http://fake-ads-backend.applifier.info/'
-//var baseURL = 'http://localhost:4567/'
-var adsType = 'mraid_brands'
+//var baseURL = 'http://fake-ads-backend.applifier.info/'
+var baseURL = 'http://localhost:4567/'
+//var adsType = 'mraid_brands'
+var adsType = 'programmatic_mraid'
 var setupURL = baseURL+'setup/'+adsType
-//var gameID_mraid = httpClient.httpGet(setupURL).game_id
-
-var gameID_mraid=10006
-console.log("mraid:::"+gameID_mraid);
-
-//var auctionRes = httpClient.getAuctionRes(baseURL,gameID_mraid);
-//console.log("correlationID:"+auctionRes.correlationId);
+var gameID_mraid = httpClient.httpGet(setupURL).game_id
+var gameID_mraid=10012
 var url = baseURL+'/v4/games/'+gameID_mraid+'/requests?platform=ios';
+
 var urlList = httpClient.getAuctionRes(url);
 
 var urlBroken = new Array()

@@ -1,5 +1,5 @@
 {
-    "correlationId": "b88cfcd32524a8f3a43136",
+    "correlationId": "f8001ab301d0f263c31347",
     "placements": {
     "defaultVideoAndPictureZone": "000000000000000000000001"
     },
@@ -7,17 +7,11 @@
     "000000000000000000000001": {
     "contentType": "programmatic/mraid-url",
     "adType": "MRAID",
-    "content": "{\"dynamicMarkup\":\"var markup = 'dynamic';\",\"markup\":\"\",\"inlinedUrl\":\"https://img.serveroute.com/bf_fairway_orig/unity_nonrtb/index_inlined.html\"}",
+    "content": "{\"dynamicMarkup\":\"var ad_name = 'gg_dragons'; var ad_title = 'Merge Dragons'; var ad_click_dest = 'https://secure-click.crossinstall.com/click/?ad=SMfk\\u0026sub=2090068\\u0026sub2=UX-47c9ac4c-39c5-4e0e-685e-52d4619dcb85\\u0026sub3=1\\u0026sub4=1007334\\u0026sub10=unity\\u0026android_ad_id=25b60022-a980-44b4-83a4-ab072555d329\\u0026sub9=gg_dragons\\u0026publisher=com.rovio.angrybirdsseasons\\u0026size=1024x600\\u0026genre=\\u0026p=YXM6MTAyNHg2MDB8YWc6MHxnZToxfGNiOjF8bmE6MXxhbDoxfGN0OjN8cGE6MHxwbTowfHBsOjA%253D\\u0026sub11=dHQ9MjAxNzAzMDIuMTE0OSZwcz0wLjIwJmFjaT1ESkZrJmRsPW5vbmUmbG9jYWxkYXlvZndlZWs9TW9uJmRtPW90aGVyJmRtdj1zY2gtaTU0NSZjdXJjPVZpZGVvKyUyNitDb21wdXRlcitHYW1lcyZkYWk9MTAwOTg3MiZuaW1yPWZhbHNlJm9zdj02JnVoPTA1JmFlcm9fZXJyb3Jfc3RhdHVzPW9rJmRldmljZWFnZXB1Yj0lNUIzZGF5LTdkYXklNUQmbXI9MSUyQzImdXBkPTAwLTA2JmFpPTIwOTAwNjgmbnZwPSU1QjElNUQmZG50PWZhbHNlJmFuPVRFU1Qmemk9ZmFsc2UmbG9jYWxwYXJ0b2Z3ZWVrPXdlZWtkYXkmYXI9dXMtZWFzdC0xJmV4PXllcyZhdD0ybmQrUHJpY2UmbmE9bG93JnZpPWZhbHNlJmJpZGRlcl9pcD0xMC4wLjAuMTQzJmF1Y3Rpb25fZGVwdGg9MSZ1cHc9d2Vla2RheSZ2cz1mYWxzZSZiYj0xMC4wMDAwMDAmcnI9MC4wMDEwNTM3NTU2MDEzNzMyODE0JnJ0PTAuMDE2JnJ2PXRydWUmbnY9JTVCMSU1RCZhYWk9MTIwODk1Mjk0NCZ1ZHc9TW9uJmJwPTAuMDEmc2M9MC4wMDgxNDc5MjgyMDc4NTE0NCZidD1jcG0mc2U9JTVCMCU1RCZuYXRpdmU9ZmFsc2UmYnBiPSU1Qi1pbmYrdG8rMC41JTVEJnRzdj0lNUI3ZGF5LWluZiU1RCZzaT0xMDA3MzM0JnBjaT1TTWZrJmNhdD1WaWRlbyslMjYrQ29tcHV0ZXIrR2FtZXMmcGNuPWdnX2RyYWdvbnMrLStNYXJrZXQtd2lkZSZjYT1jb20ucm92aW8uYW5ncnliaXJkc3NlYXNvbnMmY2I9bG93JnNzPUNSUyUzQVJORF9DUFMlM0FSTkRfRiUzQTE4MDBfTEMlM0E1MCZhPWxvdyZjZT1CX0RFRkFVTFQmYz0mZD0yMDE3MDQxNyZjcmlkPWdnX2RyYWdvbnMmcGxhPXllcyZ0cGE9SW52YWxpZENsaWNrVXJsSG9zdCZvcz1hbmRyb2lkJnN6PTEwMjR4NjAwJmc9TWFsZSZjbnQ9VVNBJmRhdGFjZW50ZXI9ZmFsc2UmY289Y2VsbHVsYXImY3A9MS4wJnBiPTEuMDAwMCZjeD11bml0eSZsb2NhbHBhcnRvZmRheT0wMC0wNiZsb2NhbGhvdXI9MDEmZGE9JTVCMGRheS0yOGRheSU1RCZwbj1BbmdyeStCaXJkcytTZWFzb25zJmFnZT1Vbmtub3du'; var ad_orientation = 'landscape'; var ad_webroot = 'https://img.serveroute.com'; var ad_logroot = 'https://www.serveroute.com'; var ad_splash_image = ad_webroot + ' / gg_dragons / img / icon.jpg'; var ad_has_custom_load_screen = false; var ad_creative_id = 'gg_dragons'; var ad_close_duration = '30000'; var ad_close_position = 'right'; var ad_close_countdown = true; var ad_exchange = 'unity'; var ad_getapp_instead_of_title = false; var ad_dynamic_parameters = ''; var ad_advertising_label_lang = ' % LABEL_LANG % '; var ad_show_age_ratings = ' % AGE_RATING % ';\",\"markup\":\"\",\"inlinedUrl\":\"https://img.serveroute.com/gg_dragons/inlined.html\"}",
     "trackingUrls": {
     "impression": [
-    "https://fake-ads-backend.applifier.info/brands/10038/%ZONE%/impression/common?adSourceId=&advertiserDomain=gramgames.com&advertisingTrackingId=49f7acaa-81f2-4887-9f3b-cd124854879c&cc=&creativeId=2090068&dealCode=&demandSeatId=&fee=0&fillSource=xinstall&floor=.1&gamerId=4654wa21b54e3b0100f44c92&gross=&grossTag=0&mediaType=mraid&networkId=&precomputedFloor=1&seatId=&utxid=UX-e5788f5e-1371-4f83-4f41-710daa628dca&value=1260&sdkVersion=%SDK_VERSION%",
-    "https://fake-ads-backend.applifier.info/ack/10038?org_path=impression"
-    ],
-    "complete": [
-    "http://test.complete.com/complete1"
-    ],
-    "click": [
-    "http://test.complete.com/click1"
+    "http://localhost:4567/brands/10003/%ZONE%/impression/common?adSourceId=&advertiserDomain=gramgames.com&advertisingTrackingId=49f7acaa-81f2-4887-9f3b-cd124854879c&cc=&creativeId=2090068&dealCode=&demandSeatId=&fee=0&fillSource=xinstall&floor=1.25&gamerId=4654wa21b54e3b0100f44c92&gross=&grossTag=0&mediaType=mraid&networkId=&precomputedFloor=1&seatId=&utxid=UX-e5788f5e-1371-4f83-4f41-710daa628dca&value=1260&sdkVersion=%SDK_VERSION%",
+    "http://localhost:4567/ack/10003?org_path=impression"
     ]
     },
     "campaignId": "000000000000000000000001",
@@ -26,4 +20,4 @@
     "seatId": 456
     }
     }
-}
+    }
